@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستقبل ستيل | المنشر السحري</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+<body>
+
+    <div class="announcement-bar">
+        ⚡ البيع بسعر المصنع! خصم 100 ج على أي قطعة لفترة محدودة
+    </div>
+
+    <header>
+        <img src="images/logo.jpg" alt="المستقبل ستيل" class="logo">
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <div class="product-grid">
+            <div class="image-viewer">
+                <div class="main-img-container">
+                    <img src="images/white.png" id="mainDisplay" class="fade-in">
+                </div>
+                <div class="thumbnail-grid">
+                    <img src="images/white.png" class="thumb active" onclick="updateView(this, 'white.png')">
+                    <img src="images/details1.jpg" class="thumb" onclick="updateView(this, 'details1.jpg')">
+                </div>
+            </div>
+
+            <div class="details-sec">
+                <div class="badge-group">
+                    <span class="badge badge-promo">خصم 100 جنيه لفترة محدودة 🔥</span>
+                    <span class="badge badge-gift">🎁 12 مشبك هدية مجاناً</span>
+                </div>
+                
+                <h1 class="product-title">المنشر السحري من المستقبل ستيل</h1>
+                
+                <div class="price-area">
+                    <span class="current-price" id="currentPrice">1090</span>
+                    <span class="old-price" id="oldPrice">1190</span>
+                    <span class="currency">جنيه</span>
+                </div>
+
+                <ul class="features-list">
+                    <li><i class="fas fa-shield-alt"></i> ضمان حقيقي لمدة 3 سنوات.</li>
+                    <li><i class="fas fa-truck"></i> شحن مجاني لجميع المحافظات.</li>
+                    <li><i class="fas fa-check"></i> منشر ضد الصدأ ويتحمل 30 كيلو.</li>
+                    <li><i class="fas fa-search-plus"></i> معاينة المنتج قبل الاستلام.</li>
+                </ul>
+
+                <div class="selector-group">
+                    <span class="selector-label">اختر المقاس والأحبال:</span>
+                    <div class="btn-group">
+                        <button class="size-opt active" onclick="setPrice(this, 1090, 1190)">120 سم - 6 أحبال</button>
+                        <button class="size-opt" onclick="setPrice(this, 1040, 1140)">100 سم - 6 أحبال</button>
+                        <button class="size-opt" onclick="setPrice(this, 980, 1080)">80 سم - 5 أحبال</button>
+                        <button class="size-opt" onclick="setPrice(this, 880, 980)">60 سم - 4 أحبال</button>
+                    </div>
+                </div>
+
+                <div class="selector-group">
+                    <span class="selector-label">اختر اللون:</span>
+                    <div class="btn-group">
+                        <div class="color-opt active" style="background:#fff" onclick="setColor(this, 'white.png')" title="أبيض"></div>
+                        <div class="color-opt" style="background:#000" onclick="setColor(this, 'black.png')" title="أسود"></div>
+                        <div class="color-opt" style="background:#F5F5DC" onclick="setColor(this, 'beige.png')" title="بيج"></div>
+                        <div class="color-opt" style="background:#98FF98" onclick="setColor(this, 'mint.png')" title="مينت جرين"></div>
+                        <div class="color-opt" style="background:#C0C0C0" onclick="setColor(this, 'silver.png')" title="فضي"></div>
+                        <div class="color-opt" style="background:#FFC0CB" onclick="setColor(this, 'pink.png')" title="وردي"></div>
+                    </div>
+                </div>
+
+                <div class="cta-btns">
+                    <a href="javascript:void(0)" onclick="sendWhatsApp()" class="main-btn btn-order">
+                        <i class="fab fa-whatsapp"></i> اطلب العرض الآن
+                    </a>
+                    <a href="tel:01505545045" class="main-btn btn-call">
+                        <i class="fas fa-phone-alt"></i> 01505545045
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/201505545045" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
