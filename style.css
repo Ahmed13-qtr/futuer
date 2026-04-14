@@ -156,3 +156,56 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         @media (max-width: 900px) { .product-grid { grid-template-columns: 1fr; } .cta-btns { grid-template-columns: 1fr; } }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--accent-color);
+        }   
+      .reviews-grid {
+    display: grid;
+    /* التوزيع ده بيضمن إن الكروت تصغر وتكبر بمرونة مع الزووم */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.review-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box; /* بيضمن إن الـ Padding ميبوظش العرض */
+}
+
+.review-img-container {
+    width: 100%;
+    /* استخدام aspect-ratio بيحافظ على الأبعاد مهما حصل زووم */
+    aspect-ratio: 1 / 1.2; 
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+.review-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* عشان صور الشات تبان كاملة */
+    display: block;
+}
+
+
+html, body {
+    overflow-x: hidden; /* يمنع ظهور شريط تمرير عرضي نهائياً */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    width: 95%; /* استخدام نسبة مئوية بدل العرض الثابت */
+    max-width: 1200px; /* حد أقصى للشاشات الكبيرة */
+    margin: 20px auto;
+    padding: 0;
+}
